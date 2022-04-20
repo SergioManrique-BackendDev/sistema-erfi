@@ -18,7 +18,7 @@ class AbonosController extends AppController
      */
     public function index()
     {
-        $abonos = $this->paginate($this->Abonos, ['contain' => ['Personas'], 'order' => ['id' => 'desc']]);
+        $abonos = $this->paginate($this->Abonos, ['contain' => ['Personas'], 'order' => ['id' => 'desc']]);       
         $this->set(compact('abonos'));
     }
 

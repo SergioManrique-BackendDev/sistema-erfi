@@ -24,7 +24,7 @@
                     <td><?= $this->Number->format($abono->id) ?></td>
                     <td><?php echo $abono->Persona['nombre'] ?></td>
                     <td>$<?= $this->Number->format($abono->cantidad) ?></td>
-                    <td><?php debug($abono->fecha); echo $abono->fecha ?></td>
+                    <td><?php echo $abono->fecha->format('d/m/Y') ?></td>
                     <td class="actions">
                         <?= $this->Html->link(__('View'), ['action' => 'view', $abono->id]) ?>
                         <?= $this->Html->link(__('Edit'), ['action' => 'edit', $abono->id]) ?>

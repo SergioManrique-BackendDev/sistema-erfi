@@ -24,7 +24,7 @@
                     <td><?= $this->Number->format($venta->id) ?></td>
                     <td><?php echo $venta->Persona['nombre'] ?></td>
                     <td>$<?= $this->Number->format($venta->cantidad) ?></td>
-                    <td><?php echo $venta->fecha ?></td>
+                    <td><?php echo $venta->fecha->format('d/m/Y') ?></td>
                     <td class="actions">
                         <?= $this->Html->link(__('View'), ['action' => 'view', $venta->id]) ?>
                         <?= $this->Html->link(__('Edit'), ['action' => 'edit', $venta->id]) ?>

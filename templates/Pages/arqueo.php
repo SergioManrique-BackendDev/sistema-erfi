@@ -83,7 +83,7 @@
             <thead>
                 <tr>
                     <th>Total</th>
-                    <td><input type='number' disabled='true' class='total-arqueo'></td>
+                    <td><input type='text' disabled='true' class='total-arqueo'></td>
                 </tr>
                 <tr>
                     <th></th>
@@ -105,7 +105,7 @@
                 Arqueo += labelInt * $(this).val();
             }
         })
-        $(".total-arqueo").val(Arqueo);
+        $(".total-arqueo").val('$' + Arqueo);
 
     })
 </script>

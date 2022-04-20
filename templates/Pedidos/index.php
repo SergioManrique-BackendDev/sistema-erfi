@@ -25,7 +25,7 @@
                 <tr>
                     <td><?= $this->Number->format($pedido->id) ?></td>
                     <td><?php echo count($pedido['solicitudes']); ?></td>
-                    <td><?= h($pedido->fecha_compra) ?></td>
+                    <td><?= h($pedido->fecha_compra->format('d/m/Y')) ?></td>
                     <td><?= $this->Number->format($pedido->costo_compra) ?></td>
                     <td><?= $this->Number->format($pedido->costo_venta) ?></td>
                     <td><?php echo $pedido->abierto ? "Si" : "No" ?></td>

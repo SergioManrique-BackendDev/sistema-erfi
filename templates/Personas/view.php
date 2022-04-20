@@ -52,7 +52,7 @@
                         <td><?= $this->Number->format($venta->id) ?></td>
                         <td><?= h($venta->descripcion) ?></td>
                         <td>$<?= $this->Number->format($venta->cantidad) ?></td>
-                        <td><?= h($venta->fecha) ?></td>
+                        <td><?= h($venta->fecha->format('d/m/Y')) ?></td>
                     </tr>
                     <?php endforeach; ?>
                 </tbody>
@@ -72,7 +72,7 @@
                     <tr>
                         <td><?= $this->Number->format($abono->id) ?></td>
                         <td>$<?= $this->Number->format($abono->cantidad) ?></td>
-                        <td><?= h($abono->fecha) ?></td>
+                        <td><?= h($abono->fecha->format('d/m/Y')) ?></td>
                     </tr>
                     <?php endforeach; ?>
                 </tbody>

@@ -23,16 +23,12 @@
                     <td><?= $this->Number->format($abono->id) ?></td>
                 </tr>
                 <tr>
-                    <th><?= __('Persona') ?></th>
-                    <td><?= $this->Number->format($abono->persona) ?></td>
-                </tr>
-                <tr>
                     <th><?= __('Cantidad') ?></th>
-                    <td><?= $this->Number->format($abono->cantidad) ?></td>
+                    <td>$<?= $this->Number->format($abono->cantidad) ?></td>
                 </tr>
                 <tr>
                     <th><?= __('Fecha') ?></th>
-                    <td><?= h($abono->fecha) ?></td>
+                    <td><?php echo $abono->fecha->format('d/m/Y') ?></td>
                 </tr>
             </table>
         </div>

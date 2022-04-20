@@ -14,7 +14,7 @@
         <table>
             <tr>
                 <th><?= __('Date') ?></th>
-                <td><?= h($lastResumen->date) ?></td>
+                <td><?= h($lastResumen->date->format('d/m/Y')) ?></td>
             </tr>
             <tr>
                 <th><?= __('Gastos Productos') ?></th>
@@ -63,7 +63,7 @@
             <tbody>
                 <?php foreach ($resumenes as $resumene): ?>
                 <tr>
-                    <td><?= h($resumene->date) ?></td>
+                    <td><?= h($resumene->date->format('d/m/Y')) ?></td>
                     <td>$<?= $this->Number->format($resumene->gastos_productos) ?></td>
                     <td>$<?= $this->Number->format($resumene->ganancia_bruta) ?></td>
                     <td>$<?= $this->Number->format($resumene->deuda) ?></td>

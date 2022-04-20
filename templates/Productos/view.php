@@ -16,7 +16,7 @@
     </aside>
     <div class="column-responsive column-80">
         <div class="productos view content">
-            <h3><?= h($producto->id) ?></h3>
+            <!--<h3><?= h($producto->id) ?></h3>-->
             <table>
                 <tr>
                     <th><?= __('Nombre') ?></th>
@@ -28,15 +28,15 @@
                 </tr>
                 <tr>
                     <th><?= __('Costo Compra') ?></th>
-                    <td><?= $this->Number->format($producto->costo_compra) ?></td>
+                    <td>$<?= $this->Number->format($producto->costo_compra) ?></td>
                 </tr>
                 <tr>
                     <th><?= __('Costo Venta') ?></th>
-                    <td><?= $this->Number->format($producto->costo_venta) ?></td>
+                    <td>$<?= $this->Number->format($producto->costo_venta) ?></td>
                 </tr>
                 <tr>
                     <th><?= __('Vendido') ?></th>
-                    <td><?= $this->Number->format($producto->vendido) ?></td>
+                    <td><?php echo $producto->vendido ? "Si" : "No"; ?></td>
                 </tr>
             </table>
         </div>

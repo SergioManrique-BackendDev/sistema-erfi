@@ -34,7 +34,7 @@
                 </tr>
                 <tr>
                     <th><?= __('Fecha Compra') ?></th>
-                    <td><?= h($pedido->fecha_compra) ?></td>
+                    <td><?= h($pedido->fecha_compra->format('d/m/Y')) ?></td>
                 </tr>
                 <tr>
                     <th><?= __('Abierto') ?></th>
@@ -121,7 +121,7 @@
                             <td><?= h($solicitudes->catalogo) ?></td>
                             <td><?= h($solicitudes->medida_producto) ?></td>
                             <?php else : ?>
-                            <td><?= h($solicitudes->fecha_entrega) ?></td>
+                            <td><?= h($solicitudes->fecha_entrega->format('d/m/Y')) ?></td>
                             <?php endif; ?>
                             <td><?= h($solicitudes->cantidad) ?></td>
                             <td><?= h($solicitudes->precio) ?></td>

@@ -18,7 +18,7 @@ class VentasController extends AppController
      */
     public function index()
     {
-        $ventas = $this->paginate($this->Ventas, ['contain' => ['Personas'], 'order' => ['id' => 'desc']]);
+        $ventas = $this->paginate($this->Ventas, ['contain' => ['Personas'], 'order' => ['id' => 'desc']]);        
         $this->set(compact('ventas'));
     }
 

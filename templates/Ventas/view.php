@@ -23,16 +23,12 @@
                     <td><?= $this->Number->format($venta->id) ?></td>
                 </tr>
                 <tr>
-                    <th><?= __('Persona') ?></th>
-                    <td><?= $this->Number->format($venta->persona) ?></td>
-                </tr>
-                <tr>
                     <th><?= __('Cantidad') ?></th>
-                    <td><?= $this->Number->format($venta->cantidad) ?></td>
+                    <td>$<?= $this->Number->format($venta->cantidad) ?></td>
                 </tr>
                 <tr>
                     <th><?= __('Fecha') ?></th>
-                    <td><?= h($venta->fecha) ?></td>
+                    <td><?php echo $venta->fecha->format('d/m/Y') ?></td>
                 </tr>
             </table>
             <div class="text">
